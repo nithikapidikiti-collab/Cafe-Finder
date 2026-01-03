@@ -1,28 +1,45 @@
 body {
-background-color: rgb(193, 236, 163);
-font-family: "Savate", sans-serif;
-text-align: center;
-padding: 1rem;
+    background-color: #f6e9ee; /* soft blush background */
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 1rem;
+    color: #4a1f2a;
 }
 
+/* Buttons */
 button {
-font-family: "Savate", sans-serif;
-font-size: 20px;
-background-color: darkgreen;
-color: white;
-border-radius: 10vw;
-padding: 1vw;
-outline-style: none;
-border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    background-color: #7b1e3a; /* burgundy */
+    color: white;
+    border-radius: 999px;
+    padding: 0.8rem 1.5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
+button:hover {
+    background-color: #5f162d;
+    transform: scale(1.03);
+}
+button {
+    display: block;
+    margin: 1rem auto;
+}
+
+
+/* Card stack container */
 .cards {
     position: relative;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     margin: 2rem auto;
-    height: 400px;
+    height: 420px;
 }
+
+/* Swipe wrapper */
 .swipe-wrapper {
     position: absolute;
     top: 0;
@@ -30,21 +47,35 @@ border: none;
     width: 100%;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Cafe card */
 .location-card {
     width: 100%;
-    background: white;
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 16px;
     overflow: hidden;
     text-align: center;
     padding: 1rem;
     margin-bottom: 1vh;
-}
-.location-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(123, 30, 58, 0.15);
 }
 
-button:hover {
-    background: #555;
+/* Image */
+.location-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Text inside cards */
+.location-card h2,
+.location-card h3 {
+    margin: 0.5rem 0;
+    color: #7b1e3a;
+}
+
+.location-card p {
+    color: #6a2c3c;
+    font-size: 0.95rem;
 }
